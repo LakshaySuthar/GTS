@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Tint Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Banner Section */
+
+        .banner {
+            background-color: #008000; /* Green color */
+            color: #ffffff; /* White text color */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
+        }
+
+        /* Content Section */
+
+        .content {
+            position: relative;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('background-image.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        /* What We Do Section */
+
+        #what-we-do {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners */
+}
+
+.section-content {
+    margin-bottom: 40px;
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    border: 1px solid #dddddd; /* Light gray border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px; /* Rounded corners */
+}
+
+.section-content h3 {
+    color: #008000; /* Green color */
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.section-content p {
+    font-size: 16px;
+    color: #666666; /* Dark gray color */
+    margin-bottom: 20px;
+}
+
+.section-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-content li {
+    margin-bottom: 10px;
+}
+
+.section-content li::before {
+    content: "\2022"; /* Bullet point */
+    color: #008000; /* Green color */
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+        /* Companies Section */
+
+        .companies {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .company {
+            margin-right: 20px;
+        }
+
+        .company img {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Contact Us Section */
+
+        .contact-us {
+            background-color: #008000; /* Green color */
+            color: #ffffff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Form Section */
+
+        .form {
+            padding: 20px;
+            background-color: #f7f7f7;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-input {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+
+        .submit-button {
+            background-color: #008000; /* Green color */
+            color: #ffffff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+</head>
+<body>
+        <!-- Banner section -->
+    <div class="banner">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Green Tint Solutions</h1>
+    </div>
+
+    <!-- Content section -->
+    <div class="content">
+        <div class="background-image"></div>
+        <!-- What We Do Section -->
+        <section id="what-we-do">
+            <h2>What We Do</h2>
+            <p>At Green Tint Solutions, we specialize in providing high-quality chemical solutions for two distinct industries: Textile and Automotive. Our expertise lies in delivering innovative and effective products that cater to the unique needs of each sector.</p>
+
+            <!-- Textile Chemicals Section -->
+            <div class="section-content">
+                <h3>Textile Chemicals</h3>
+                <p>We offer a comprehensive range of textile chemicals that enhance the quality, durability, and aesthetic appeal of fabrics. Our products include:</p>
+                <ul>
+                    <li><strong>Silicon Softners</strong>: Enhancing fabric performance with innovative textile chemicals</li>
+			    <li><strong>Finishing Auxiliaries</strong>: Advanced finishing auxiliaries for enhanced fabric softness, smoothness, and wrinkle resistance.</li>
+                    <li><strong>Water Repellent</strong>: Advanced water repellent chemical for durable and long-lasting water resistance.</li>
+                    <li><strong>Oil and Water Repellent</strong>: Revolutionary oil and water repellent chemical for ultimate stain protection and durability.</li>
+			    <li><strong>Yarn Lubricants</strong>: High-performance yarn lubricants for reduced friction, improved yarn runnability, and enhanced textile quality.</li>
+  			    <li><strong>Flame Retardant</strong>: Innovative flame retardant solutions for enhanced fire safety, durability, and compliance with global standards.</li>
+                </ul>
+            </div>
+
+            <!-- Automobile Chemicals Section -->
+            <div class="section-content">
+                <h3>Automotive Chemicals</h3>
+                <p>Our automobile chemicals are designed to meet the demanding requirements of the automotive industry. Our product range includes:</p>
+                <ul>
+                    <li><strong>Water Mold Release Agent</strong>: Eco-friendly water-based mold release agent for efficient mold separation, reduced residue, and improved product quality.</li>
+                    <li><strong>Silicon Mold Release Agent</strong>: High-performance silicone-based mold release agent for effortless mold separation, reduced sticking, and extended mold life.</li>
+                    <li><strong>Foam Generating Agent</strong>: Powerful foam generating agent for creating rich, stable, and long-lasting foam in various textile and industrial applications.</li>
+                </ul>
+            </div>
+
+            <!-- Our Commitment Section -->
+            <div class="section-content">
+                <h3>Our Commitment</h3>
+                <p>At Green Tint Solutions, we are committed to delivering exceptional quality, innovative solutions, and outstanding customer service. Our team of experts works closely with clients to understand their specific needs and find tailored solutions that meet their requirements. With a strong focus on sustainability and environmental responsibility, we strive to make a positive impact on the textile and automotive industries.</p>
+            </div>
+        </section>
+        <h2>Our Business Partners</h2>
+        <p>Transforming industries together with our trusted partners, driving innovation and excellence.</p>
+    </div>
+
+    <!-- Companies section -->
+    <div class="companies">
+        <div class="company">
+            <img src="Nicca.png" alt="Company 1">
+        </div>
+        <div class="company">
+            <img src="kexal.png" alt="Company 2">
+        </div>
+        <div class="company">
+            <img src="elkay.png" alt="Company 3">
+        </div>
+    </div>
+
+
+	<!-- Form section -->
+	<div class="form">
+		<h2>Get in Touch</h2>
+		<form action="https://formspree.io/greentintsolutions@gmail.com" method="post">
+			<div class="form-group">
+				<label for="name" class="form-label">Name:</label>
+				<input type="text" id="name" name="name" class="form-input">
+			</div>
+			<div class="form-group">
+				<label for="phone" class="form-label">Phone Number:</label>
+				<input type="tel" id="phone" name="phone" class="form-input">
+			</div>
+			<div class="form-group">
+				<label for="email" class="form-label">Email:</label>
+				<input type="email" id="email" name="email" class="form-input">
+			</div>
+			<div class="form-group">
+				<label for="comments" class="form-label">Comments:</label>
+				<textarea id="comments" name="comments" class="form-input"></textarea>
+			</div>
+			<button type="submit" class="submit-button">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
