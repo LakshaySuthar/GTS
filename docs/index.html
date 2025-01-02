@@ -187,6 +187,64 @@ footer a {
 footer a:hover {
     color: #fff;
 }
+      .cards-section {
+            max-width: 95vw;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .card-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+        
+        .card {
+            min-width: 250px;
+            margin-right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card .name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .card .company {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .card .comment {
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .scroll-button.left {
+            left: 0;
+        }
+        
+        .scroll-button.right {
+            right: 0;
+        }
     </style>
 </head>
 
@@ -253,8 +311,31 @@ footer a:hover {
             <img src="elkay.png" alt="elkay">
         </div>
     </div>
-
-
+        <div class="cards-section">
+<h2>Here Are Some Of Our Customer's Testimonies</h2>
+        <div class="card-container">
+            <div class="card">
+                <p class="company">Uni Product</p>
+                <p class="comment">"Product quality is superior. We have been using their OWR and it has enhanced the repellent quality of our products."</p>
+            </div>
+            <div class="card">
+                <p class="company">Shivani Textile</p>
+                <p class="comment">"They have reasonable price and high quality chemicals."</p>
+            </div>
+            <div class="card">
+                <p class="company">Ecoreach</p>
+                <p class="comment">"Owners are very friendly and helpfull. The suggestions that they gave helped us improving our product's quality."</p>
+            </div>
+            <div class="card">
+                <p class="company">The Solution Fort</p>
+                <p class="comment">"On time delivery for all orders."</p>
+            </div>
+            <div class="card">
+                <p class="company">Vinayak Infra</p>
+                <p class="comment">"They have wide range of automotive chemicals. It helped increasing the lifetime of the machinery and reduced overall expense on them.</p>
+            </div>
+        </div>
+</div>
 	<!-- Form section -->
 	<div class="form">
 		<h2>Get in Touch</h2>
