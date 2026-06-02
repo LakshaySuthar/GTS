@@ -1,366 +1,343 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Tint Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Green Tint Solutions | Advanced Chemical Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        industrial: {
+                            900: '#0f172a', // Deep Charcoal
+                            800: '#1e293b', // Lighter Charcoal
+                            700: '#334155', // Slate
+                        },
+                        brand: {
+                            green: '#10b981', // Vibrant Emerald
+                            dark: '#047857',
+                            light: '#34d399',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* Global Styles */
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-
-        /* Banner Section */
-
-        .banner {
-            background-color: #008000; /* Green color */
-            color: #ffffff; /* White text color */
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo {
-    width: 150px;
-    height: 150px;
-    margin-right: 10px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-        /* Content Section */
-
-        .content {
-            position: relative;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .background-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('background-image.jpg');
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            z-index: -1;
-        }
-
-        /* What We Do Section */
-
-        #what-we-do {
-    background-color: #f7f7f7;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Rounded corners */
-}
-
-.section-content {
-    margin-bottom: 40px;
-    background-color: #ffffff; /* White background */
-    padding: 20px;
-    border: 1px solid #dddddd; /* Light gray border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    border-radius: 10px; /* Rounded corners */
-}
-
-.section-content h3 {
-    color: #008000; /* Green color */
-    font-weight: bold;
-    margin-top: 0;
-}
-
-.section-content p {
-    font-size: 16px;
-    color: #666666; /* Dark gray color */
-    margin-bottom: 20px;
-}
-
-.section-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.section-content li {
-    margin-bottom: 10px;
-}
-
-.section-content li::before {
-    content: "\2022"; /* Bullet point */
-    color: #008000; /* Green color */
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-        /* Companies Section */
-
-        .companies {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-        }
-
-        .company {
-            margin-right: 20px;
-        }
-
-        .company img {
-            width: 100px;
-            height: 100px;
-        }
-
-        /* Contact Us Section */
-
-        .contact-us {
-            background-color: #008000; /* Green color */
-            color: #ffffff; /* White text color */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Form Section */
-
-        .form {
-            padding: 20px;
-            background-color: #f7f7f7;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .form-input {
-            width: 100%;
-            height: 40px;
-            margin-bottom: 20px;
-            padding: 10px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-        }
-
-        .submit-button {
-            background-color: #008000; /* Green color */
-            color: #ffffff; /* White text color */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-	    footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
-    border-top: 1px solid #444;
-    margin-top: 40px;
-}
-
-footer a {
-    color: #ccc;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #fff;
-}
-      .cards-section {
-            max-width: 95vw;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f7f7f7;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
         
-        .card-container {
-            display: flex;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-        }
-        
-        .card {
-            min-width: 250px;
-            margin-right: 20px;
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .card .name {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-        }
-        
-        .card .company {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        
-        .card .comment {
-            font-size: 16px;
-            color: #333;
-        }
-        
-        .scroll-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            color: #333;
-            cursor: pointer;
-        }
-        
-        .scroll-button.left {
-            left: 0;
-        }
-        
-        .scroll-button.right {
-            right: 0;
+        /* Hide scrollbar for horizontal scroll areas but keep functionality */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .bg-pattern {
+            background-image: radial-gradient(#334155 1px, transparent 1px);
+            background-size: 24px 24px;
         }
     </style>
 </head>
+<body class="bg-industrial-900 text-slate-200 antialiased selection:bg-brand-green selection:text-white">
 
-</head>
-<body>
-        <!-- Banner section -->
-    <div class="banner">
-        <img src="logo.png" alt="Logo" class="logo">
-        <h1>Green Tint Solutions</h1>
-    </div>
-
-    <!-- Content section -->
-    <div class="content">
-        <div class="background-image"></div>
-        <!-- What We Do Section -->
-        <section id="what-we-do">
-            <h2>What We Do</h2>
-            <p>At Green Tint Solutions, we specialize in providing high-quality chemical solutions for two distinct industries: Textile and Automotive. Our expertise lies in delivering innovative and effective products that cater to the unique needs of each sector.</p>
-
-            <!-- Textile Chemicals Section -->
-            <div class="section-content">
-                <h3>Textile Chemicals</h3>
-                <p>We offer a comprehensive range of textile chemicals that enhance the quality, durability, and aesthetic appeal of fabrics. Our products include:</p>
-                <ul>
-                    <li><strong>Silicon Softners</strong>: Enhancing fabric performance with innovative textile chemicals</li>
-			    <li><strong>Finishing Auxiliaries</strong>: Advanced finishing auxiliaries for enhanced fabric softness, smoothness, and wrinkle resistance.</li>
-                    <li><strong>Water Repellent</strong>: Advanced water repellent chemical for durable and long-lasting water resistance.</li>
-                    <li><strong>Oil and Water Repellent</strong>: Revolutionary oil and water repellent chemical for ultimate stain protection and durability.</li>
-			    <li><strong>Yarn Lubricants</strong>: High-performance yarn lubricants for reduced friction, improved yarn runnability, and enhanced textile quality.</li>
-  			    <li><strong>Flame Retardant</strong>: Innovative flame retardant solutions for enhanced fire safety, durability, and compliance with global standards.</li>
-                </ul>
+    <!-- STICKY HEADER -->
+    <header class="fixed top-0 w-full z-50 bg-industrial-900/95 backdrop-blur-md border-b border-industrial-700 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="logo.png" alt="Green Tint Solutions Logo" class="w-12 h-12 rounded-full object-cover border-2 border-brand-green group-hover:scale-105 transition-transform" onerror="this.style.display='none'">
+                <span class="font-black text-xl md:text-2xl tracking-tight text-white">Green Tint <span class="text-brand-green">Solutions</span></span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#what-we-do" class="text-sm font-bold text-slate-300 hover:text-brand-green transition-colors">What We Do</a>
+                <a href="#testimonials" class="text-sm font-bold text-slate-300 hover:text-brand-green transition-colors">Testimonials</a>
+                <a href="#partners" class="text-sm font-bold text-slate-300 hover:text-brand-green transition-colors">Partners</a>
+                <a href="tel:+919050383321" class="flex items-center gap-2 text-sm font-bold text-white hover:text-brand-green transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    +91 90503 83321
+                </a>
+                <a href="#contact" class="bg-brand-green text-industrial-900 px-6 py-2.5 rounded-md font-black uppercase tracking-wide hover:bg-brand-light transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(16,185,129,0.4)]">
+                    Get a Quote
+                </a>
             </div>
 
-            <!-- Automobile Chemicals Section -->
-            <div class="section-content">
-                <h3>Automotive Chemicals</h3>
-                <p>Our automobile chemicals are designed to meet the demanding requirements of the automotive industry. Our product range includes:</p>
-                <ul>
-                    <li><strong>Water Based Mold Release Agent</strong>: Eco-friendly water-based mold release agent for efficient mold separation, reduced residue, and improved product quality.</li>
-                    <li><strong>Silicon Based Mold Release Agent</strong>: High-performance silicone-based mold release agent for effortless mold separation, reduced sticking, and extended mold life.</li>
-                    <li><strong>Foam Generating Agent</strong>: Powerful foam generating agent for creating rich, stable, and long-lasting foam in various textile and industrial applications.</li>
-                </ul>
-            </div>
-
-            <!-- Our Commitment Section -->
-            <div class="section-content">
-                <h3>Our Commitment</h3>
-                <p>At Green Tint Solutions, we are committed to delivering exceptional quality, innovative solutions, and outstanding customer service. Our team of experts works closely with clients to understand their specific needs and find tailored solutions that meet their requirements. With a strong focus on sustainability and environmental responsibility, we strive to make a positive impact on the textile and automotive industries.</p>
-            </div>
-        </section>
-<div class="cards-section">
-<h2>Here Are Some Of Our Customer's Testimonies</h2>
-        <div class="card-container">
-            <div class="card">
-                <p class="comment">"Product quality is superior. We have been using some products from them, mainly OWR and it has enhanced the l quality of our products."</p>
-            </div>
-            <div class="card">
-                <p class="comment">"They have reasonable price and high quality chemicals."</p>
-            </div>
-            <div class="card">
-                <p class="comment">"Owners are very friendly and helpfull. The suggestions that they gave helped us improving our product's quality."</p>
-            </div>
-            <div class="card">
-                <p class="comment">"On time delivery for all orders."</p>
-            </div>
-            <div class="card">
-                <p class="comment">"They have wide range of automotive chemicals. It helped increasing the lifetime of the machinery and reduced overall expense on them.</p>
+            <!-- Mobile Nav CTA -->
+            <div class="lg:hidden flex items-center gap-4">
+                <a href="tel:+919050383321" class="bg-brand-green text-industrial-900 px-4 py-2 rounded-md font-black uppercase tracking-wide flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    Call
+                </a>
             </div>
         </div>
-</div>
-        <h2>Our Business Partners</h2>
-        <p>Transforming industries together with our trusted partners, driving innovation and excellence.</p>
-    </div>
+    </header>
 
-    <!-- Companies section -->
-    <div class="companies">
-        <div class="company">
-            <img src="nicca.png" alt="nicca">
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-industrial-900">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="background-image.jpg" alt="Industrial Background" class="w-full h-full object-cover opacity-30" onerror="this.src='https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80'">
+            <div class="absolute inset-0 bg-gradient-to-b from-industrial-900/90 via-industrial-900/80 to-industrial-900"></div>
         </div>
-        <div class="company">
-            <img src="Artboard.png" alt="am-lc">
-        </div>
-        <div class="company">
-            <img src="OM-Tex-Silicons.png" alt="OM-Tex-Silicons">
-        </div>
-    </div>
-       
-	<!-- Form section -->
-	<div class="form">
-		<h2>Get in Touch</h2>
-		<form action="https://formspree.io/f/xdkkwpdw" method="POST">
-			<div class="form-group">
-				<label for="name" class="form-label">Name:</label>
-				<input type="text" id="name" name="name" class="form-input">
-			</div>
-			<div class="form-group">
-				<label for="phone" class="form-label">Phone Number:</label>
-				<input type="tel" id="phone" name="phone" class="form-input">
-			</div>
-			<div class="form-group">
-				<label for="email" class="form-label">Email:</label>
-				<input type="email" id="email" name="email" class="form-input">
-			</div>
-			<div class="form-group">
-				<label for="comments" class="form-label">Comments:</label>
-				<textarea id="comments" name="comments" class="form-input"></textarea>
-			</div>
-			<button type="submit" class="submit-button">Submit</button>
-		</form>
-	</div>
-	<hr>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 bg-brand-green/10 border border-brand-green/50 text-brand-light px-4 py-2 rounded-full font-bold uppercase tracking-wider text-xs md:text-sm mb-8">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
+                </span>
+                Innovative Chemical Engineering
+            </div>
 
-<!-- Footer section -->
-<footer>
-    <p>Connect with us:</p>
-    <p>Phone: <a href="tel:++919050383321">+91 90503 83321</a> | Email: <a href="mailto:greentintsolutions@gmail.com">greentintsolutions@gmail.com</a></p>
-</footer>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight mb-6">
+                Advanced Chemical Solutions for <br class="hidden lg:block" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-teal-400">Textile & Automotive</span> Industries.
+            </h1>
+            
+            <p class="mt-4 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-medium mb-10 leading-relaxed">
+                Enhancing quality, durability, and performance. We deliver eco-friendly, high-performance chemical formulations tailored to your manufacturing needs.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#what-we-do" class="w-full sm:w-auto bg-brand-green text-industrial-900 px-8 py-4 rounded-lg font-black text-lg uppercase tracking-wide hover:bg-brand-light transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(16,185,129,0.3)]">
+                    Explore Our Products
+                </a>
+                <a href="#contact" class="w-full sm:w-auto bg-industrial-800 border border-industrial-700 text-white px-8 py-4 rounded-lg font-bold text-lg uppercase tracking-wide hover:bg-industrial-700 transition-all">
+                    Request Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS LOGO STRIP -->
+    <section id="partners" class="py-10 border-y border-industrial-700 bg-industrial-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-bold text-slate-500 uppercase tracking-widest mb-6">Trusted by Industry Leaders</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <img src="nicca.png" alt="Nicca" class="h-12 md:h-16 object-contain" onerror="this.outerHTML='<span class=\'text-xl font-black text-slate-400\'>NICCA</span>'">
+                <img src="Artboard.png" alt="AM-LC" class="h-12 md:h-16 object-contain" onerror="this.outerHTML='<span class=\'text-xl font-black text-slate-400\'>AM-LC</span>'">
+                <img src="OM-Tex-Silicons.png" alt="OM-Tex-Silicons" class="h-12 md:h-16 object-contain" onerror="this.outerHTML='<span class=\'text-xl font-black text-slate-400\'>OM-TEX SILICONS</span>'">
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT WE DO SECTION -->
+    <section id="what-we-do" class="py-24 bg-pattern relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Specialized Chemical Divisions</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Delivering innovative and effective products that cater to the unique demands of the textile and automotive sectors.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Textile Chemicals Card -->
+                <div class="bg-industrial-800 border border-industrial-700 rounded-2xl p-8 md:p-10 shadow-2xl hover:border-brand-green/50 transition-colors group">
+                    <div class="w-16 h-16 bg-brand-green/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-4">Textile Chemicals</h3>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Enhancing the quality, durability, and aesthetic appeal of fabrics with our comprehensive range of advanced formulations.</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div><strong class="text-white block">Silicon Softeners</strong><span class="text-sm text-slate-400">Enhancing fabric performance with innovative chemistry.</span></div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div><strong class="text-white block">Finishing Auxiliaries</strong><span class="text-sm text-slate-400">Advanced solutions for softness, smoothness, and wrinkle resistance.</span></div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div><strong class="text-white block">Oil & Water Repellents</strong><span class="text-sm text-slate-400">Revolutionary protection for ultimate stain resistance and durability.</span></div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div><strong class="text-white block">Yarn Lubricants & Flame Retardants</strong><span class="text-sm text-slate-400">High-performance friction reduction and global-standard fire safety.</span></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Automotive Chemicals Card -->
+                <div class="bg-industrial-800 border border-industrial-700 rounded-2xl p-8 md:p-10 shadow-2xl hover:border-brand-green/50 transition-colors group">
+                    <div class="w-16 h-16 bg-brand-green/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-black text-white mb-4">Automotive Chemicals</h3>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Engineered to meet the demanding, high-stress requirements of modern automotive manufacturing and maintenance.</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div><strong class="text-white block">Water-Based Mold Release Agent</strong><span class="text-sm text-slate-400">Eco-friendly solution for efficient separation and reduced residue.</span></div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div><strong class="text-white block">Silicon-Based Mold Release Agent</strong><span class="text-sm text-slate-400">High-performance formula for effortless separation and extended mold life.</span></div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div><strong class="text-white block">Foam Generating Agent</strong><span class="text-sm text-slate-400">Powerful agent for creating rich, stable, and long-lasting foam in industrial applications.</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMITMENT BANNER -->
+    <section class="py-16 bg-brand-green relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-industrial-900 mb-6">Our Commitment to Excellence</h2>
+            <p class="text-lg md:text-xl text-industrial-900/80 font-semibold leading-relaxed">
+                We are committed to delivering exceptional quality, innovative solutions, and outstanding customer service. With a strong focus on sustainability and environmental responsibility, we strive to make a positive impact on the textile and automotive industries.
+            </p>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="py-24 bg-industrial-900 border-t border-industrial-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Client Success Stories</h2>
+                <p class="text-lg text-slate-400">Hear from the businesses that trust Green Tint Solutions.</p>
+            </div>
+
+            <!-- Horizontal Scroll Container -->
+            <div class="flex overflow-x-auto hide-scrollbar gap-6 pb-8 snap-x snap-mandatory">
+                
+                <!-- Card 1 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-industrial-800 p-8 rounded-2xl border border-industrial-700 snap-center shrink-0">
+                    <div class="flex text-brand-green mb-4">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-slate-300 text-lg italic mb-6">"Product quality is superior. We have been using some products from them, mainly OWR and it has enhanced the quality of our products significantly."</p>
+                    <p class="font-bold text-white uppercase tracking-wider text-sm">Textile Manufacturer</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-industrial-800 p-8 rounded-2xl border border-industrial-700 snap-center shrink-0">
+                    <div class="flex text-brand-green mb-4">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-slate-300 text-lg italic mb-6">"They have a wide range of automotive chemicals. It helped increase the lifetime of our machinery and reduced overall maintenance expenses."</p>
+                    <p class="font-bold text-white uppercase tracking-wider text-sm">Automotive Partner</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="min-w-[300px] md:min-w-[400px] bg-industrial-800 p-8 rounded-2xl border border-industrial-700 snap-center shrink-0">
+                    <div class="flex text-brand-green mb-4">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-slate-300 text-lg italic mb-6">"Owners are very friendly and helpful. The suggestions they gave helped us improve our product's quality. On-time delivery for all orders."</p>
+                    <p class="font-bold text-white uppercase tracking-wider text-sm">Verified Client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FORM SECTION -->
+    <section id="contact" class="py-24 bg-industrial-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Contact Info & Direct Call -->
+                <div class="flex flex-col justify-center">
+                    <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Ready to Upgrade Your Formulations?</h2>
+                    <p class="text-lg text-slate-400 mb-10">Get in touch with our technical experts today to discuss custom chemical solutions for your manufacturing process.</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Massive Click-to-Call -->
+                        <a href="tel:+919050383321" class="group flex items-center bg-industrial-900 border-2 border-industrial-700 hover:border-brand-green p-6 rounded-2xl transition-all transform hover:-translate-y-1 shadow-xl">
+                            <div class="bg-industrial-800 group-hover:bg-brand-green p-4 rounded-full transition-colors mr-6">
+                                <svg class="w-8 h-8 text-white group-hover:text-industrial-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 font-bold uppercase tracking-wider text-sm mb-1">Direct Sales & Support</p>
+                                <p class="text-2xl md:text-4xl font-black text-white group-hover:text-brand-green transition-colors">+91 90503 83321</p>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:greentintsolutions@gmail.com" class="group flex items-center bg-industrial-900 border-2 border-industrial-700 hover:border-brand-green p-6 rounded-2xl transition-all transform hover:-translate-y-1 shadow-xl">
+                            <div class="bg-industrial-800 group-hover:bg-brand-green p-4 rounded-full transition-colors mr-6">
+                                <svg class="w-8 h-8 text-white group-hover:text-industrial-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 font-bold uppercase tracking-wider text-sm mb-1">Email Us</p>
+                                <p class="text-lg md:text-xl font-bold text-white group-hover:text-brand-green transition-colors break-all">greentintsolutions@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formspree Form -->
+                <div class="bg-industrial-900 p-8 md:p-10 rounded-3xl border border-industrial-700 shadow-2xl">
+                    <h3 class="text-2xl font-bold text-white mb-6">Request a Technical Consultation</h3>
+                    <form action="https://formspree.io/f/xdkkwpdw" method="POST" class="space-y-5">
+                        <div>
+                            <label for="name" class="block text-sm font-bold text-slate-400 mb-2 uppercase tracking-wide">Full Name</label>
+                            <input type="text" id="name" name="name" required class="w-full bg-industrial-800 border border-industrial-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-colors placeholder-slate-600" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-bold text-slate-400 mb-2 uppercase tracking-wide">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full bg-industrial-800 border border-industrial-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-colors placeholder-slate-600" placeholder="+91 00000 00000">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-bold text-slate-400 mb-2 uppercase tracking-wide">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full bg-industrial-800 border border-industrial-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-colors placeholder-slate-600" placeholder="john@company.com">
+                        </div>
+                        <div>
+                            <label for="comments" class="block text-sm font-bold text-slate-400 mb-2 uppercase tracking-wide">Project Details / Comments</label>
+                            <textarea id="comments" name="comments" rows="4" required class="w-full bg-industrial-800 border border-industrial-700 text-white px-4 py-3 rounded-lg focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-colors placeholder-slate-600 resize-none" placeholder="Tell us about your chemical requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-green text-industrial-900 font-black text-lg uppercase tracking-wide py-4 rounded-lg hover:bg-brand-light transition-colors shadow-[0_0_20px_rgba(16,185,129,0.2)]">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t border-industrial-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-brand-green rounded-full flex items-center justify-center">
+                    <span class="text-industrial-900 font-black text-xs">GT</span>
+                </div>
+                <span class="font-black text-xl tracking-tight text-white">Green Tint <span class="text-brand-green">Solutions</span></span>
+            </div>
+            
+            <p class="text-slate-500 text-sm text-center md:text-left">
+                © 2026 Green Tint Solutions. All rights reserved.
+            </p>
+            
+            <div class="flex gap-6">
+                <a href="tel:+919050383321" class="text-slate-400 hover:text-brand-green transition-colors font-bold text-sm">Call Us</a>
+                <a href="mailto:greentintsolutions@gmail.com" class="text-slate-400 hover:text-brand-green transition-colors font-bold text-sm">Email Us</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
